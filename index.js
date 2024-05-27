@@ -6,11 +6,11 @@ const app = express();
 const port = 5000;
 
 // Configure CORS to allow specific origin
-app.use(cors({
-  origin: 'https://deluxe-narwhal-926463.netlify.app/', // Allow requests from this origin
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these methods
-  credentials: true // Allow credentials such as cookies, authorization headers or TLS client certificates
-}));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://deluxe-narwhal-926463.netlify.app");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(express.json());
 
