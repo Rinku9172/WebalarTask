@@ -8,6 +8,10 @@ const port = 5000
 app.use(cors())
 app.use(express.json())
 
+router.get('/', async (req, res) => {
+res.send("Backend is working");
+})
+
 //Available Routes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/task', require('./routes/tasks'))
