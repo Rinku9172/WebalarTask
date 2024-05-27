@@ -14,6 +14,7 @@ res.send("Backend is working");
 
 //Available Routes
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/task', require('./routes/tasks'))
 
 
 app.listen(port, () => {
