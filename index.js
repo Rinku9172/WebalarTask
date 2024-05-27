@@ -14,8 +14,8 @@ res.send("Backend is working");
 
 //Available Routes
 app.use('/api/auth', require('./routes/auth'))
-app.use('/api/task', require('./routes/tasks'))
+
 
 app.listen(port, () => {
-  console.log(`taskManager backend listening at http://localhost:${port}`)
+  console.log(`PreetMakeup backend listening at http://localhost:${port}`)
 })
