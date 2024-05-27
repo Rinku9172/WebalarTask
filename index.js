@@ -7,7 +7,7 @@ const port = 5000;
 
 // Configure CORS to allow specific origin
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow requests from this origin
+  origin: 'https://deluxe-narwhal-926463.netlify.app/', // Allow requests from this origin
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these methods
   credentials: true // Allow credentials such as cookies, authorization headers or TLS client certificates
 }));
